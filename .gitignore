@@ -1,0 +1,16 @@
+# Compiled binaries & object files
+bin/
+build/
+*.o
+*.out
+*.exe
+
+# VS Code runtime configurations
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Local runtime data
+tracker_data.csv
+*.tmp
+.DS_Store
