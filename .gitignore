@@ -7,8 +7,8 @@ build/
 
 # VS Code runtime configurations
 .vscode/*
-!.vscode/tasks.json
-!.vscode/launch.json
+.vscode/tasks.json
+.vscode/launch.json
 
 # Local runtime data
 tracker_data.csv
