@@ -7,7 +7,7 @@ A lightweight, terminal-based personal productivity tool written in modern C++ (
 ## Features
 
 - **Unified Management**: Track tasks (with completion statuses) and financial expenses in a single CLI interface.
-- **Categorization & Aggregation**: Categorize entries (e.g., _Work_, _Food_, _Travel_) with automatic expense totals and category breakdowns.
+- **Categorization & Aggregation**: Categorize entries (e.g., *Work*, *Food*, *Travel*) with automatic expense totals and category breakdowns.
 - **Persistent Storage**: Automatically saves state to `tracker_data.csv` using atomic file writes to prevent data corruption.
 - **Input Validation**: Clean input stream handling resistant to malformed entries and invalid types.
 - **Developer Ready**: Preconfigured with `Makefile` and VS Code tasks for single-shortcut building and GDB/LLDB debugging.
@@ -44,13 +44,11 @@ cli-tracker/
 ### 1. Build the Executable
 
 Using `make`:
-
 ```bash
 make
 ```
 
 Or compile directly via `g++`:
-
 ```bash
 mkdir -p bin
 g++ -std=c++17 -Wall -Wextra -Iinclude src/main.cpp src/Item.cpp src/Tracker.cpp -o bin/tracker
@@ -78,15 +76,15 @@ make clean
 
 Data persists automatically in `tracker_data.csv` using the following comma-separated structure:
 
-| Column        | Type    | Description                                  |
-| :------------ | :------ | :------------------------------------------- |
-| `id`          | Integer | Unique identifier generated on creation      |
-| `type`        | String  | `TASK` or `EXPENSE`                          |
-| `title`       | String  | Description or item name                     |
-| `category`    | String  | Grouping tag (e.g., `Work`, `Study`, `Food`) |
-| `amount`      | Float   | Monetary value (`0.00` for tasks)            |
-| `isCompleted` | Integer | `1` for completed/cleared, `0` for pending   |
-| `date`        | String  | Formatted date string (`YYYY-MM-DD`)         |
+| Column | Type | Description |
+| :--- | :--- | :--- |
+| `id` | Integer | Unique identifier generated on creation |
+| `type` | String | `TASK` or `EXPENSE` |
+| `title` | String | Description or item name |
+| `category` | String | Grouping tag (e.g., `Work`, `Study`, `Food`) |
+| `amount` | Float | Monetary value (`0.00` for tasks) |
+| `isCompleted`| Integer | `1` for completed/cleared, `0` for pending |
+| `date` | String | Formatted date string (`YYYY-MM-DD`) |
 
 ---
 
